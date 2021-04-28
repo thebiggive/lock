@@ -11,8 +11,14 @@
 
 namespace Symfony\Component\Lock\Exception;
 
+use Symfony\Component\Lock\Lock;
+
 /**
  * LockConflictedException is thrown when a lock is acquired by someone else.
+ *
+ * In non-blocking mode it is caught by acquire() and acquireRead().
+ * @see Lock::acquire()
+ * @see Lock::acquireRead()
  *
  * @author Jérémy Derussé <jeremy@derusse.com>
  */
